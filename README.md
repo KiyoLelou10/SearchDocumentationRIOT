@@ -4,6 +4,7 @@ Hybrid search for local RIOT OS docs. The indexer splits Doxygen HTML into ancho
 # Prerequisites
 Clone into RIOT OS and generate the doxygen
 Also install all necessary dependencies
+pip install  numpy faiss-cpu sentence-transformers rank-bm25 beautifulsoup4 lxml tqdm flask
 
 # Embedder
 To create the embeddings run python3 RIOTSearchEmbed.py --docs_dir "your\path\to\RIOT\doc\doxygen\html"  --out_dir ./riot_index --embed_model intfloat/e5-base-v2    --chunk_tokens 60 --chunk_overlap 15
